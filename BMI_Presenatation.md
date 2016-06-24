@@ -1,0 +1,59 @@
+Assessing Health Risk using Body Mass Index 
+Project for Developing Data Products
+========================================================
+author: Sathish V 
+date: 
+
+What is BMI
+========================================================
+
+Body Mass Index (BMI) is a measure of body fat calcualted as Weight divided by height of a person. As per WHO, following classification is proposed based on BMI
+
+- BMI < 18.5 : Underweight
+- BMI [18.5 - 24.9] : Normal weight
+- BMI [25 - 29.9] : Over weight
+- BMI >= 30 : Obesity
+
+Calculation of BMI
+========================================================
+Formula for calculating BMI:
+
+BMI   = weight / height^2 
+
+where weight is in kg and height is in meter
+
+
+```r
+weight = 62
+height = 1.67
+BMI <- weight /height ^2
+BMI
+```
+
+```
+[1] 22.23099
+```
+
+Assessment of Body fat
+========================================================
+
+```r
+BMI_f <- function(weight, height) {
+    BMI_value <- weight/(height^2)
+    ifelse(BMI_value < 18.5, "Underweight", ifelse(BMI_value < 25, "Normal weight", 
+        ifelse(BMI_value < 30, "Overweight", "Obesity")))
+}
+```
+For our example (weight=62 kg and height=1.67 m) the BMI would be:
+
+```r
+BMI_f(75, 1.8)
+```
+
+```
+[1] "Normal weight"
+```
+Conclusion
+========================================================
+
+BMI can be used for population assessment of overweight and obesity. Because calculation requires only height and weight, it is inexpensive and easy to use for clinicians and for the general public.BMI can be used as a screening tool for body fatness but is not diagnostic
