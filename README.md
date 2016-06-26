@@ -8,4 +8,4 @@ The application is accesible in: <https://vsathish.shinyapps.io/Data_Product_Pro
 
 After a presentation of the application is disigned using slidify. The presentation could be visualized in:
 
-<https://github.com/vsathish2014/Developing-Data-Products/blob/master/BMI_Presenatation.html>
+<http://rpubs.com/vsathish/BMI>
